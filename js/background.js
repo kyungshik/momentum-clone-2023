@@ -1,9 +1,13 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
+const body = document.querySelector("body");
+const images = [];
+
+for(var x = 0 ; x < 13; x++){
+    images.push(`${x}.jpeg`);
+}
 
 const chosenImage = images[Math.floor(Math.random()*images.length)];
+const bgImage = `url(img/${chosenImage})`;
 
-const bgImage = document.createElement("img");
-
-bgImage.src = `img/${chosenImage}`;
-
-document.body.appendChild(bgImage);
+document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundSize = "cover";
+document.body.style.backgroundImage = bgImage;

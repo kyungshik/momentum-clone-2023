@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
     <title>Momentum</title>
 </head>
 <body>
+    <h2 id="clock">00:00</h2>
+    <div id = "weather">
+        <span></span>
+        <span></span>
+    </div>
     <form id="login-form" class="hidden">
         <input 
         required 
@@ -17,16 +23,17 @@
         />
         <input type="submit" value="Log In" />
     </form>
-    <h2 id="clock">00:00</h2>
+    
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
+        <input type="text" placeholder="What's on your schedule today?" required/>
     </form>
     <ul id="todo-list"></ul>
     <div id = "quote">
-        <span></span>
+        <span class = "sentence"></span>
         <span></span>
     </div>
+    
 
 
     <script src="js/greetings.js"></script>
@@ -34,5 +41,9 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/text.js"></script>
+    
+
 </body>
 </html>
